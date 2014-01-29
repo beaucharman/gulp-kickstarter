@@ -1,2 +1,1 @@
-gulp-kickstarter
-================
+# Gulp Kickstarter
