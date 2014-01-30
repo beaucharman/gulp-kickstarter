@@ -4,6 +4,9 @@
  *
  */
 
+/**
+ * Require Tasks
+ */
 var gulp  = require("gulp");
 var colors = require("colors");
 var sass  = require("gulp-sass");
@@ -11,17 +14,25 @@ var jshint = require("gulp-jshint");
 var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
 
-colors.setTheme({info: 'green', data: 'grey', help: 'cyan', debug: 'blue', error: 'red'});
 
+
+/**
+ * Stylsheets 
+ */
 var sourceStylesheets = "/library/source/stylesheets";
 var destStylesheets = "/library/stylesheets";
 
+/**
+ * Javascripts
+ */
 var sourceJavascripts = "/library/source/javascripts";
 var destJavascripts = "/library/javascripts";
 
+
+
 /**
  *
- * Stylesheets
+ * Stylesheet Task
  *
  */
 gulp.task('styles', function () {
@@ -35,9 +46,10 @@ gulp.task('styles', function () {
 });
 
 
+
 /**
  *
- * JavaScripts
+ * JavaScript Task
  *
  */
 gulp.task('scripts', function () {
@@ -47,13 +59,15 @@ gulp.task('scripts', function () {
     sourceJavascripts + '/plugins.js',
     sourceJavascripts + '/main.js,'
   ])
-  .pipe(jshint())
-  .pipe(jshint.reporter('default'))
-  .pipe(concat('main.js'))
-  .pipe(uglify())
-  .pipe(gulp.dest(destJavascripts));
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'))
+    .pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(destJavascripts));
 
 });
+
+
 
 /**
  *
@@ -69,7 +83,7 @@ gulp.task('scripts', function () {
  */
 gulp.task('default', function () {
 
-    gulp.start('styles', 'scripts');
+  gulp.start('styles', 'scripts');
 });
 
 
