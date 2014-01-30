@@ -8,7 +8,6 @@
  * Require Tasks
  */
 var gulp  = require("gulp");
-var colors = require("colors");
 var sass  = require("gulp-sass");
 var jshint = require("gulp-jshint");
 var concat = require("gulp-concat");
@@ -23,7 +22,7 @@ var sourceStylesheets = "/library/source/stylesheets";
 var destStylesheets = "/library/stylesheets";
 
 /**
- * Javascripts
+ * JavaScripts
  */
 var sourceJavascripts = "/library/source/javascripts";
 var destJavascripts = "/library/javascripts";
@@ -76,6 +75,7 @@ gulp.task('scripts', function () {
  */
  
  // coming soon...
+
 
 
 /**
